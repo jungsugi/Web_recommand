@@ -1,0 +1,519 @@
+﻿
+<!DOCTYPE html>
+<html>
+<head>
+
+  <!-- SITE TITTLE -->
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Recommand locations</title>
+  
+  <!-- PLUGINS CSS STYLE -->
+  <link href="plugins/jquery-ui/jquery-ui.css" rel="stylesheet">
+  <link href="plugins/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+  <link href="plugins/font-awesome/css/font-awesome.min.css" rel="stylesheet">
+  <link rel="stylesheet" type="text/css" href="plugins/rs-plugin/css/settings.css" media="screen">
+  <link rel="stylesheet" type="text/css" href="plugins/selectbox/select_option1.css">
+  <link rel="stylesheet" type="text/css" href="plugins/datepicker/datepicker.css">
+  <link rel="stylesheet" type="text/css" href="plugins/isotope/jquery.fancybox.css">
+  <link rel="stylesheet" type="text/css" href="plugins/isotope/isotope.css">
+
+  <!-- GOOGLE FONT -->
+  <link href='https://fonts.googleapis.com/css?family=Montserrat:400,700' rel='stylesheet' type='text/css'>
+  
+  <!-- CUSTOM CSS -->
+  <link href="css/style.css" rel="stylesheet">
+
+  <!-- FAVICON -->
+  <link rel="shortcut icon" type="image/png" href="img/favicon.png"/>
+
+  <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+  <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+  <!--[if lt IE 9]>
+  <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+  <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+  <![endif]-->
+
+</head>
+
+<body>
+  <div class="main-wrapper">
+
+   <header>
+      <nav class="navbar navbar-default navbar-fixed-top lightHeader" role="navigation">
+        <div class="container">
+
+          <!-- Brand and toggle get grouped for better mobile display -->
+          <div class="navbar-header">
+            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-ex1-collapse">
+              <span class="sr-only">Toggle navigation</span>
+              <span class="icon-bar"></span>
+              <span class="icon-bar"></span>
+              <span class="icon-bar"></span>
+            </button>
+            <a class="navbar-brand" href="index.html"></a>
+          </div>
+
+          <!-- Collect the nav links, forms, and other content for toggling -->
+          <div class="collapse navbar-collapse navbar-ex1-collapse">
+            <ul class="nav navbar-nav navbar-right">
+              <li class="active dropdown singleDrop">
+                <a href="index.html">Home</a>
+              </li>
+              <li class="dropdown megaDropMenu">
+                <a href="javascript:void(0)" class="dropdown-toggle" data-toggle="dropdown" data-hover="dropdown" data-delay="300" data-close-others="true" aria-expanded="false">Visualization</a>
+                <ul class="row dropdown-menu">
+                  <li class="col-sm-3 col-xs-12">
+                    <ul class="list-unstyled">
+                      <li><a href="map_all.html"><font size=3>모든 여행지</font></a></li>
+                      
+                    </ul>
+                  </li>
+                  <li class="col-sm-3 col-xs-12">
+                    <ul class="list-unstyled">
+                      <li><a href="map_date.html"><font size=3>데이트</font></a></li>  <!-- 링크 걸기 -->
+
+                    </ul>
+                  </li>
+                  <li class="col-sm-3 col-xs-12">
+                    <ul class="list-unstyled">
+                      <li><a href="map_history.html"><font size=3 >역사</font></a></li>  <!-- 링크 걸기 -->
+
+                    </ul>
+                  </li>
+                  <li class="col-sm-3 col-xs-12">
+                    <ul class="list-unstyled">
+                      <li><a href="map_rest.html"><font size=3>휴양지</font></a></li>
+                    </ul>
+                  </li>
+                </ul>
+              </li>
+
+                            <li class="dropdown singleDrop">
+                <a href="javascript:void(0)" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">추천</a>
+                <ul class="dropdown-menu dropdown-menu-left">
+                  <li><a href="packages-list-left-sidebar.html">여행지 추천</a></li>  <!-- 링크 걸기 -->
+              
+                </ul>
+              </li>
+              <li class="dropdown singleDrop">
+                <a href="javascript:void(0)" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false"><?php echo $_SESSION['pid']; ?></a>
+                <ul class="dropdown-menu dropdown-menu-right">
+                  <li><a href="./logout.php">Log out</a></li>
+                  <li><a href="tabs-and-dropdown.html">Tabs &amp; Dropdowns</a></li>
+                  <li><a href="pricing-table.html">Pricing Tables</a></li>
+                </ul>
+              </li>
+              <li class="dropdown searchBox">
+              <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false"><span class="searchIcon"><i class="fa fa-search" aria-hidden="true"></i></span></a>
+                <ul class="dropdown-menu dropdown-menu-right">
+                  <li>
+                    <span class="input-group">
+                      <input type="text" class="form-control" placeholder="Search..." aria-describedby="basic-addon2">
+                      <span class="input-group-addon" id="basic-addon2">Search</span>
+                    </span>
+                  </li>
+                </ul>
+              </li>
+            </ul>
+          </div>
+
+        </div>
+      </nav>
+    </header>
+
+    <!-- PAGE TITLE -->
+    <section class="pageTitle" style="background-image:url(img/pages/page-title-bg6.jpg);">
+      <div class="container">
+        <div class="row">
+          <div class="col-xs-12">
+            <div class="titleTable">
+              <div class="titleTableInner">
+                <div class="pageTitleInfo">
+                  <h1>데이트</h1>
+                  <img src="img/packages/page-title-border.jpg" alt="image">
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- PAGE CONTENT -->
+    <section class="mainContentSection packagesSection">
+      <div class="container">
+        <div class="row">
+
+<div id="map" style="width:100%;height:1000px;"></div>
+
+<script type="text/javascript" src="http://apis.daum.net/maps/maps3.js?apikey=29d44145ba8a0d32c1356d039d1bf47f"></script>
+<script>
+var mapContainer = document.getElementById('map'), // 지도를 표시할 div  
+    mapOption = { 
+        center: new daum.maps.LatLng(37.537123, 127.005523), // 지도의 중심좌표 
+        level: 10 // 지도의 확대 레벨
+    };
+
+var map = new daum.maps.Map(mapContainer, mapOption); // 지도를 생성합니다
+ 
+// 마커를 표시할 위치와 title 객체 배열입니다 
+var positions = [
+		{title: "제13회벌터산 공원축제", latlng: new daum.maps.LatLng(37.4362, 127.125) },
+		{title: "익스트림 퍼포먼스 플라잉", latlng: new daum.maps.LatLng(37.5949, 127.13) },
+		{title: "어린이 율동놀이 뮤지컬 <호비의 놀이극장>", latlng: new daum.maps.LatLng(37.3834, 126.929) },
+		{title: "라벤타나&KoN 콘서트", latlng: new daum.maps.LatLng(37.5949, 127.13) },
+		{title: "연극 강철왕", latlng: new daum.maps.LatLng(37.5949, 127.13) },
+		{title: "인순이 콘서트", latlng: new daum.maps.LatLng(37.2716, 127.434) },
+		{title: "오아시스 세탁소 습격사건", latlng: new daum.maps.LatLng(37.2716, 127.434) },
+		{title: "제24회 전국 무궁화 수원 축제", latlng: new daum.maps.LatLng(37.263, 127.038) },
+		{title: "지킬앤하이드 갈라", latlng: new daum.maps.LatLng(37.7337, 127.034) },
+		{title: "해설이 있는 발레 호두까기 인형 갈라", latlng: new daum.maps.LatLng(37.7337, 127.034) },
+		{title: "김수희 설운도 콘서트", latlng: new daum.maps.LatLng(37.2716, 127.434) },
+		{title: "장기하와 얼굴들 콘서트", latlng: new daum.maps.LatLng(37.5949, 127.13) },
+		{title: "수원시립합창단 제152회 정기연주회", latlng: new daum.maps.LatLng(37.3086, 126.988) },
+		{title: "수원영상미디어센터 12월 상영프로그램", latlng: new daum.maps.LatLng(37.2739, 127.035) },
+		{title: "파크콘서트", latlng: new daum.maps.LatLng(37.3775, 127.124) },
+		{title: "2014년  그녀가 다시 돌아왔다!  엽기적인 그녀", latlng: new daum.maps.LatLng(37.2692, 127.032) },
+		{title: "파크콘서트", latlng: new daum.maps.LatLng(37.3775, 127.124) },
+		{title: "가족뮤지컬 아빠사랑해요", latlng: new daum.maps.LatLng(37.5949, 127.13) },
+		{title: "2014 수원 음악인의 밤", latlng: new daum.maps.LatLng(37.3086, 126.988) },
+		{title: "수원영상미디어센터 5월 상영프로그램", latlng: new daum.maps.LatLng(37.2739, 127.035) },
+		{title: "평택호", latlng: new daum.maps.LatLng(36.9673, 126.922) },
+		{title: "플레이방", latlng: new daum.maps.LatLng(37.2602, 127.018) },
+		{title: "점프노리 군포산본점", latlng: new daum.maps.LatLng(37.3609, 126.946) },
+		{title: "시흥놀이랜드", latlng: new daum.maps.LatLng(37.2146, 127.044) },
+		{title: "돼지꼬랭이 키즈카페", latlng: new daum.maps.LatLng(37.2727, 126.952) },
+		{title: "키즈왕국", latlng: new daum.maps.LatLng(37.3606, 127.162) },
+		{title: "킴앤리체험박물관", latlng: new daum.maps.LatLng(37.7905, 126.696) },
+		{title: "아이팡팡", latlng: new daum.maps.LatLng(37.3107, 127.081) },
+		{title: "키즈쿡", latlng: new daum.maps.LatLng(37.2328, 127.213) },
+		{title: "플레이방방", latlng: new daum.maps.LatLng(37.3638, 126.731) },
+		{title: "아이팡팡", latlng: new daum.maps.LatLng(37.1932, 127.03) },
+		{title: "토들랜드", latlng: new daum.maps.LatLng(36.9903, 127.271) },
+		{title: "썸베베", latlng: new daum.maps.LatLng(37.3519, 127.162) },
+		{title: "고려게임장", latlng: new daum.maps.LatLng(37.7387, 127.049) },
+		{title: "점핑플러스", latlng: new daum.maps.LatLng(37.3855, 127.111) },
+		{title: "안산승마랜드마인", latlng: new daum.maps.LatLng(37.2963, 126.912) },
+		{title: "테르메덴", latlng: new daum.maps.LatLng(37.1976, 127.446) },
+		{title: "로만바스", latlng: new daum.maps.LatLng(37.2324, 127.156) },
+		{title: "라바파크 어린이비전센터점", latlng: new daum.maps.LatLng(37.7174, 127.194) },
+		{title: "(주)뽀로로파크", latlng: new daum.maps.LatLng(37.6666, 126.743) },
+		{title: "바탕골미술관", latlng: new daum.maps.LatLng(37.4886, 127.397) },
+		{title: "미메시스 아트 뮤지엄", latlng: new daum.maps.LatLng(37.7168, 126.689) },
+		{title: "타임앤블레이드박물관", latlng: new daum.maps.LatLng(37.7873, 126.698) },
+		{title: "세계문학박물관", latlng: new daum.maps.LatLng(37.7263, 126.694) },
+		{title: "김중업박물관", latlng: new daum.maps.LatLng(37.4182, 126.918) },
+		{title: "닻미술관", latlng: new daum.maps.LatLng(37.3803, 127.271) },
+		{title: "한국미술관", latlng: new daum.maps.LatLng(37.3089, 127.132) },
+		{title: "허브아일랜드 식물원", latlng: new daum.maps.LatLng(38.0691, 127.309) },
+		{title: "우석헌자연사박물관", latlng: new daum.maps.LatLng(37.6978, 127.161) },
+		{title: "왈츠와 닥터만 커피박물관", latlng: new daum.maps.LatLng(37.5914, 127.338) },
+		{title: "자연사박물관우석헌", latlng: new daum.maps.LatLng(37.698, 127.161) },
+		{title: "충현박물관", latlng: new daum.maps.LatLng(37.4336, 126.878) },
+		{title: "성남중앙지하시장", latlng: new daum.maps.LatLng(37.4434, 127.15) },
+		{title: "의정부제일시장", latlng: new daum.maps.LatLng(37.7397, 127.05) },
+		{title: "사기막골도자기시장", latlng: new daum.maps.LatLng(37.2942, 127.412) },
+		{title: "미래타운제2종합시장", latlng: new daum.maps.LatLng(37.3723, 127.139) },
+		{title: "팔달문시장", latlng: new daum.maps.LatLng(37.2778, 127.018) },
+		{title: "부천자유시장", latlng: new daum.maps.LatLng(37.4846, 126.777) },
+		{title: "은혜어린이공원", latlng: new daum.maps.LatLng(37.4923, 126.775) },
+		{title: "햇님어린이공원", latlng: new daum.maps.LatLng(37.3481, 126.957) },
+		{title: "중앙공원", latlng: new daum.maps.LatLng(37.5006, 126.764) },
+		{title: "판교", latlng: new daum.maps.LatLng(37.3926, 127.106) },
+		{title: "둔배미공원", latlng: new daum.maps.LatLng(37.3118, 126.816) },
+		{title: "노을빛공원", latlng: new daum.maps.LatLng(37.4006, 126.985) },
+		{title: "청석어린이공원", latlng: new daum.maps.LatLng(37.7278, 126.716) },
+		{title: "소월어린이공원", latlng: new daum.maps.LatLng(37.351, 126.933) },
+		{title: "수국 어린이공원", latlng: new daum.maps.LatLng(37.2216, 126.986) },
+		{title: "동신", latlng: new daum.maps.LatLng(37.2948, 126.99) },
+		{title: "금강어린이공원", latlng: new daum.maps.LatLng(37.5064, 126.763) },
+		{title: "장승배기", latlng: new daum.maps.LatLng(37.2557, 127.018) },
+		{title: "상동호수공원", latlng: new daum.maps.LatLng(37.5036, 126.746) },
+		{title: "석촌", latlng: new daum.maps.LatLng(37.3366, 127.12) },
+		{title: "5호공원", latlng: new daum.maps.LatLng(37.2922, 127.641) },
+		{title: "서촌공원", latlng: new daum.maps.LatLng(37.4882, 126.751) },
+		{title: "7호공원", latlng: new daum.maps.LatLng(37.297, 127.628) },
+		{title: "솔찬", latlng: new daum.maps.LatLng(37.2529, 127.065) },
+		{title: "목련놀이터(9호)", latlng: new daum.maps.LatLng(37.3874, 126.955) },
+		{title: "공원299", latlng: new daum.maps.LatLng(37.6426, 126.893) },
+		{title: "하늘빛어린이공원", latlng: new daum.maps.LatLng(37.7325, 127.056) },
+		{title: "둔촌", latlng: new daum.maps.LatLng(37.4287, 127.152) },
+		{title: "미리내", latlng: new daum.maps.LatLng(37.2453, 127.069) },
+		{title: "공원306", latlng: new daum.maps.LatLng(37.6, 126.875) },
+		{title: "판교제6호(너른들)", latlng: new daum.maps.LatLng(37.3901, 127.099) },
+		{title: "낙생", latlng: new daum.maps.LatLng(37.344, 127.1) },
+		{title: "은혜어린이공원", latlng: new daum.maps.LatLng(37.3664, 126.943) },
+		{title: "판교", latlng: new daum.maps.LatLng(37.3926, 127.106) },
+		{title: "동산어린이공원", latlng: new daum.maps.LatLng(37.3469, 126.957) },
+		{title: "자유공원", latlng: new daum.maps.LatLng(37.3802, 126.966) },
+		{title: "시립꽃동산놀이터", latlng: new daum.maps.LatLng(37.4052, 126.951) },
+		{title: "원고잔공원", latlng: new daum.maps.LatLng(37.3241, 126.824) },
+		{title: "황새울", latlng: new daum.maps.LatLng(37.3841, 127.118) },
+		{title: "혜성", latlng: new daum.maps.LatLng(37.255, 127.038) },
+		{title: "앞산어린이공원", latlng: new daum.maps.LatLng(37.3489, 126.946) },
+		{title: "중앙공원", latlng: new daum.maps.LatLng(37.3899, 126.959) },
+		{title: "판교제3호(눈꽃)", latlng: new daum.maps.LatLng(37.3914, 127.084) },
+		{title: "공원295", latlng: new daum.maps.LatLng(37.655, 126.896) },
+		{title: "제77호 어린이공원(샛별어린이공원)", latlng: new daum.maps.LatLng(37.2364, 127.192) },
+		{title: "공원300", latlng: new daum.maps.LatLng(37.6434, 126.895) },
+		{title: "공세제2호 어린이공원(자봉)", latlng: new daum.maps.LatLng(37.2435, 127.111) },
+		{title: "공세제3호 어린이공원(버들)", latlng: new daum.maps.LatLng(37.2403, 127.111) },
+		{title: "꿈동산놀이터", latlng: new daum.maps.LatLng(37.4013, 126.915) },
+		{title: "공원307", latlng: new daum.maps.LatLng(37.6022, 126.872) },
+		{title: "석촌", latlng: new daum.maps.LatLng(37.3366, 127.12) },
+		{title: "하늘빛어린이공원", latlng: new daum.maps.LatLng(37.8326, 127.072) },
+		{title: "바람어린이공원", latlng: new daum.maps.LatLng(37.1761, 127.055) },
+		{title: "둔촌", latlng: new daum.maps.LatLng(37.4287, 127.152) },
+		{title: "제56호 어린이공원", latlng: new daum.maps.LatLng(37.2691, 127.219) },
+		{title: "중앙공원", latlng: new daum.maps.LatLng(37.4328, 126.997) },
+		{title: "꿈동산", latlng: new daum.maps.LatLng(37.4696, 126.847) },
+		{title: "청사앞소공원", latlng: new daum.maps.LatLng(37.4248, 126.99) },
+		{title: "판교제3호(눈꽃)", latlng: new daum.maps.LatLng(37.3914, 127.084) },
+		{title: "판교제3호(눈꽃)", latlng: new daum.maps.LatLng(37.3914, 127.084) },
+		{title: "아양1호공원", latlng: new daum.maps.LatLng(37.0032, 127.254) },
+		{title: "동현공원", latlng: new daum.maps.LatLng(37.7565, 126.781) },
+		{title: "판교제6호(너른들)", latlng: new daum.maps.LatLng(37.3901, 127.099) },
+		{title: "명동공원", latlng: new daum.maps.LatLng(37.7598, 126.776) },
+		{title: "제30호 어린이공원(새천년)", latlng: new daum.maps.LatLng(37.2887, 127.114) },
+		{title: "정자소공원", latlng: new daum.maps.LatLng(37.3584, 127.106) },
+		{title: "죽전제3호 어린이공원", latlng: new daum.maps.LatLng(37.3337, 127.119) },
+		{title: "석촌", latlng: new daum.maps.LatLng(37.3366, 127.12) },
+		{title: "공세제1호 어린이공원(탑실)", latlng: new daum.maps.LatLng(37.2453, 127.121) },
+		{title: "동안놀이터(13호)", latlng: new daum.maps.LatLng(37.3896, 126.965) },
+		{title: "선유3 어린이공원", latlng: new daum.maps.LatLng(37.8647, 126.799) },
+		{title: "주접어린이공원", latlng: new daum.maps.LatLng(37.3914, 126.933) },
+		{title: "지행2공원", latlng: new daum.maps.LatLng(37.8899, 127.064) },
+		{title: "꿈동산", latlng: new daum.maps.LatLng(37.4145, 127.126) },
+		{title: "둔촌", latlng: new daum.maps.LatLng(37.4287, 127.152) },
+		{title: "낙원소공원", latlng: new daum.maps.LatLng(37.4171, 126.92) },
+		{title: "중앙공원", latlng: new daum.maps.LatLng(37.9037, 127.054) },
+		{title: "참나무(풍동)", latlng: new daum.maps.LatLng(37.6659, 126.801) },
+		{title: "한강어린이11", latlng: new daum.maps.LatLng(37.6514, 126.683) },
+		{title: "피아노숲공원(1호)", latlng: new daum.maps.LatLng(37.2184, 126.956) },
+		{title: "오이도어린이공원", latlng: new daum.maps.LatLng(37.3416, 126.69) },
+		{title: "수락어린이공원", latlng: new daum.maps.LatLng(37.6893, 127.052) },
+		{title: "청포도어린이공원", latlng: new daum.maps.LatLng(37.5125, 126.811) },
+		{title: "죽전제7호 어린이공원", latlng: new daum.maps.LatLng(37.3302, 127.133) },
+		{title: "정자소공원", latlng: new daum.maps.LatLng(37.3584, 127.106) },
+		{title: "동진원제3호어린이공원", latlng: new daum.maps.LatLng(37.2671, 127.166) },
+		{title: "행복한어린이공원", latlng: new daum.maps.LatLng(37.5017, 126.751) },
+		{title: "동산어린이공원", latlng: new daum.maps.LatLng(37.5298, 126.782) },
+		{title: "알미", latlng: new daum.maps.LatLng(37.6459, 126.783) },
+		{title: "오색어린이공원", latlng: new daum.maps.LatLng(37.7579, 127.117) },
+		{title: "마두", latlng: new daum.maps.LatLng(37.6549, 126.786) },
+		{title: "달어린이공원", latlng: new daum.maps.LatLng(37.3453, 126.755) },
+		{title: "제41호 근린공원  (만골공원)", latlng: new daum.maps.LatLng(37.2868, 127.116) },
+		{title: "중앙공원", latlng: new daum.maps.LatLng(37.3261, 127.096) },
+		{title: "만남", latlng: new daum.maps.LatLng(37.3396, 126.83) },
+		{title: "꿈동산", latlng: new daum.maps.LatLng(37.4145, 127.126) },
+		{title: "스누피", latlng: new daum.maps.LatLng(37.5939, 127.145) },
+		{title: "꿈동산", latlng: new daum.maps.LatLng(37.3419, 126.823) },
+		{title: "판교제6호(너른들)", latlng: new daum.maps.LatLng(37.3901, 127.099) },
+		{title: "꿈동산", latlng: new daum.maps.LatLng(37.3026, 126.839) },
+		{title: "월광", latlng: new daum.maps.LatLng(37.3357, 126.844) },
+		{title: "25호공원", latlng: new daum.maps.LatLng(36.9992, 127.223) },
+		{title: "꿈동산", latlng: new daum.maps.LatLng(37.4145, 127.126) },
+		{title: "하늘자전거(일산2)", latlng: new daum.maps.LatLng(37.6795, 126.78) },
+		{title: "낙생", latlng: new daum.maps.LatLng(37.344, 127.1) },
+		{title: "고읍 광장", latlng: new daum.maps.LatLng(37.7952, 127.078) },
+		{title: "후동", latlng: new daum.maps.LatLng(37.6798, 126.768) },
+		{title: "건지공원", latlng: new daum.maps.LatLng(37.0066, 127.237) },
+		{title: "식물원", latlng: new daum.maps.LatLng(37.3152, 126.864) },
+		{title: "동백제9공원 (해놀공원)", latlng: new daum.maps.LatLng(37.2741, 127.16) },
+		{title: "노을빛공원", latlng: new daum.maps.LatLng(37.7296, 126.716) },
+		{title: "꿈동산", latlng: new daum.maps.LatLng(37.477, 126.859) },
+		{title: "안성맞춤가족공원(17호근린공원)", latlng: new daum.maps.LatLng(37.0139, 127.203) },
+		{title: "철산", latlng: new daum.maps.LatLng(37.4886, 126.865) },
+		{title: "웃말아랫말4", latlng: new daum.maps.LatLng(37.6207, 126.894) },
+		{title: "숭인공원", latlng: new daum.maps.LatLng(37.0084, 127.273) },
+		{title: "7호공원", latlng: new daum.maps.LatLng(37.0165, 127.258) },
+		{title: "용천", latlng: new daum.maps.LatLng(37.6422, 126.783) },
+		{title: "달맞이", latlng: new daum.maps.LatLng(37.4556, 126.884) },
+		{title: "정자소공원", latlng: new daum.maps.LatLng(37.3584, 127.106) },
+		{title: "반월공원", latlng: new daum.maps.LatLng(37.3289, 126.893) },
+		{title: "중앙공원", latlng: new daum.maps.LatLng(37.3263, 126.83) },
+		{title: "양서3호 어린이공원", latlng: new daum.maps.LatLng(37.5432, 127.323) },
+		{title: "판교", latlng: new daum.maps.LatLng(37.3926, 127.106) },
+		{title: "상록수공원", latlng: new daum.maps.LatLng(37.2995, 126.862) },
+		{title: "여우별", latlng: new daum.maps.LatLng(37.2449, 126.968) },
+		{title: "황새울", latlng: new daum.maps.LatLng(37.3841, 127.118) },
+		{title: "중앙공원", latlng: new daum.maps.LatLng(37.3617, 126.93) },
+		{title: "웃말아랫말2", latlng: new daum.maps.LatLng(37.6224, 126.891) },
+		{title: "성곡어린이공원", latlng: new daum.maps.LatLng(37.5181, 126.816) },
+		{title: "웃말아랫말3", latlng: new daum.maps.LatLng(37.6256, 126.89) },
+		{title: "달맞이", latlng: new daum.maps.LatLng(37.6746, 126.802) },
+		{title: "오빈10 어린이공원", latlng: new daum.maps.LatLng(37.5061, 127.476) },
+		{title: "황새울", latlng: new daum.maps.LatLng(37.3841, 127.118) },
+		{title: "아차산역사공원2", latlng: new daum.maps.LatLng(37.5609, 127.102) },
+		{title: "낙생", latlng: new daum.maps.LatLng(37.344, 127.1) },
+		{title: "현대5호 어린이공원(해오른)", latlng: new daum.maps.LatLng(37.2329, 127.063) },
+		{title: "용담낚시터", latlng: new daum.maps.LatLng(37.1924, 127.31) },
+		{title: "두밀리 낚시터", latlng: new daum.maps.LatLng(37.8155, 127.466) },
+		{title: "현 실내낚시터", latlng: new daum.maps.LatLng(37.2767, 127.438) },
+		{title: "서신바다", latlng: new daum.maps.LatLng(37.1621, 126.68) },
+		{title: "올레실내낚시터", latlng: new daum.maps.LatLng(37.3337, 126.83) },
+		{title: "산곡낚시터", latlng: new daum.maps.LatLng(37.7272, 127.112) },
+		{title: "창리낚시터", latlng: new daum.maps.LatLng(37.14, 127.185) },
+		{title: "만정낚시터", latlng: new daum.maps.LatLng(37.0179, 127.186) },
+		{title: "수암낚시터", latlng: new daum.maps.LatLng(37.3706, 126.881) },
+		{title: "신촌", latlng: new daum.maps.LatLng(37.2877, 126.911) },
+		{title: "폭포낚시터", latlng: new daum.maps.LatLng(37.8836, 127.36) },
+		{title: "가평낚시터", latlng: new daum.maps.LatLng(37.8555, 127.51) },
+		{title: "즐거운 실내낚시터", latlng: new daum.maps.LatLng(37.2791, 127.445) },
+		{title: "한강실내낚시터", latlng: new daum.maps.LatLng(37.2361, 127.202) },
+		{title: "청평자연휴양림", latlng: new daum.maps.LatLng(37.7115, 127.407) },
+		{title: "한탄강관광지오토캠핑장", latlng: new daum.maps.LatLng(38.0087, 127.059) },
+		{title: "주식회사 마이랜드", latlng: new daum.maps.LatLng(37.8297, 126.718) },
+		{title: "테르메덴", latlng: new daum.maps.LatLng(37.1976, 127.446) },
+		{title: "축령산 자연휴양림", latlng: new daum.maps.LatLng(37.7545, 127.312) },
+		{title: "광릉솔개캠핑장", latlng: new daum.maps.LatLng(37.7642, 127.144) },
+		{title: "용인반딧불캠핑장", latlng: new daum.maps.LatLng(37.131, 127.296) },
+		{title: "황학산수목원", latlng: new daum.maps.LatLng(37.2785, 127.649) },
+		{title: "우리꽃식물원", latlng: new daum.maps.LatLng(37.1154, 126.884) },
+		{title: "덕평공룡수목원", latlng: new daum.maps.LatLng(37.2309, 127.337) },
+		{title: "대중가수 콘서트", latlng: new daum.maps.LatLng(37.7337, 127.034) },
+		{title: "당신과 함께 웃고싶을 때", latlng: new daum.maps.LatLng(37.2716, 127.434) },
+		{title: "문화가 있는 날! 공연장습격사건  더 하우스 콘서트", latlng: new daum.maps.LatLng(37.3086, 126.988) },
+		{title: "봄날의 꽃바람 북콘서트", latlng: new daum.maps.LatLng(37.2568, 127.015) },
+		{title: "노리파크소사벌점", latlng: new daum.maps.LatLng(37.0025, 127.105) },
+		{title: "타요키즈카페하남풍산점", latlng: new daum.maps.LatLng(37.5513, 127.208) },
+		{title: "파파 모래놀이", latlng: new daum.maps.LatLng(37.3835, 127.259) },
+		{title: "남양주 승마장", latlng: new daum.maps.LatLng(37.757, 127.274) },
+		{title: "트리플밸리", latlng: new daum.maps.LatLng(37.3669, 126.879) },
+		{title: "묘적사", latlng: new daum.maps.LatLng(37.6232, 127.261) },
+		{title: "세븐엔터테인먼트", latlng: new daum.maps.LatLng(37.5668, 127.457) },
+		{title: "우리엔터테인", latlng: new daum.maps.LatLng(37.7695, 126.696) },
+		{title: "단대마트시장", latlng: new daum.maps.LatLng(37.4446, 127.158) },
+		{title: "초림", latlng: new daum.maps.LatLng(37.3753, 127.118) },
+		{title: "동백제6공원 (석교공원)", latlng: new daum.maps.LatLng(37.28, 127.158) },
+		{title: "백현", latlng: new daum.maps.LatLng(37.3711, 127.112) },
+		{title: "민락문화공원", latlng: new daum.maps.LatLng(37.7425, 127.092) },
+		{title: "양산체육공원6", latlng: new daum.maps.LatLng(37.6208, 126.63) },
+		{title: "심곡 제3호", latlng: new daum.maps.LatLng(37.4504, 127.101) },
+		{title: "석 호 공 원", latlng: new daum.maps.LatLng(32.5739, 124.87) },
+		{title: "동백제10호 어린이공원(다솜)", latlng: new daum.maps.LatLng(37.2658, 127.157) },
+		{title: "역마", latlng: new daum.maps.LatLng(37.2966, 127.016) },
+		{title: "심곡 제2호", latlng: new daum.maps.LatLng(37.4508, 127.099) },
+		{title: "박석", latlng: new daum.maps.LatLng(37.4437, 127.162) },
+		{title: "박석", latlng: new daum.maps.LatLng(37.4437, 127.162) },
+		{title: "불당골", latlng: new daum.maps.LatLng(37.6506, 126.845) },
+		{title: "월곶조각공원", latlng: new daum.maps.LatLng(37.7229, 126.549) },
+		{title: "개나리(일산2)", latlng: new daum.maps.LatLng(37.6838, 126.79) },
+		{title: "박석", latlng: new daum.maps.LatLng(37.4437, 127.162) },
+		{title: "초림", latlng: new daum.maps.LatLng(37.3753, 127.118) },
+		{title: "개운", latlng: new daum.maps.LatLng(37.4369, 126.877) },
+		{title: "심곡 제3호", latlng: new daum.maps.LatLng(37.4504, 127.101) },
+		{title: "백현", latlng: new daum.maps.LatLng(37.3711, 127.112) },
+		{title: "풍림", latlng: new daum.maps.LatLng(37.3224, 126.828) },
+		{title: "백현", latlng: new daum.maps.LatLng(37.3711, 127.112) },
+		{title: "심곡 제2호", latlng: new daum.maps.LatLng(37.4508, 127.099) },
+		{title: "심곡 제3호", latlng: new daum.maps.LatLng(37.4504, 127.101) },
+		{title: "가마절 제2호", latlng: new daum.maps.LatLng(37.4597, 127.142) },
+		{title: "가마절 제2호", latlng: new daum.maps.LatLng(37.4597, 127.142) },
+		{title: "상적 제2호", latlng: new daum.maps.LatLng(37.4305, 127.074) },
+		{title: "상적 제2호", latlng: new daum.maps.LatLng(37.4305, 127.074) },
+		{title: "심곡 제2호", latlng: new daum.maps.LatLng(37.4508, 127.099) },
+		{title: "당정2공원", latlng: new daum.maps.LatLng(37.3493, 126.959) },
+		{title: "가마절 제2호", latlng: new daum.maps.LatLng(37.4597, 127.142) },
+		{title: "명인", latlng: new daum.maps.LatLng(37.2948, 126.996) },
+		{title: "벽제2", latlng: new daum.maps.LatLng(37.7111, 126.903) },
+		{title: "능골근린공원", latlng: new daum.maps.LatLng(37.3641, 126.786) },
+		{title: "상적 제2호", latlng: new daum.maps.LatLng(37.4305, 127.074) },
+		{title: "초림", latlng: new daum.maps.LatLng(37.3753, 127.118) },
+		{title: "세치어린이공원", latlng: new daum.maps.LatLng(37.4739, 126.805) },
+		{title: "한터낚시터", latlng: new daum.maps.LatLng(37.2628, 127.267) },
+		{title: "우리실내낚시터", latlng: new daum.maps.LatLng(37.336, 126.799) },
+		{title: "스카이 글램핑", latlng: new daum.maps.LatLng(37.7265, 127.297) },
+		{title: "플로렌스 글램핑&캠핑", latlng: new daum.maps.LatLng(37.8931, 127.552) },
+		{title: "용인블루캠핑장", latlng: new daum.maps.LatLng(37.1342, 127.31) },
+		{title: "산음캠핑", latlng: new daum.maps.LatLng(37.5992, 127.596) },
+		{title: "글램퍼스", latlng: new daum.maps.LatLng(37.5791, 127.682) },
+		{title: "글램핑 앤 카라반", latlng: new daum.maps.LatLng(37.5861, 127.678) },
+		{title: "카라반 캠핑장", latlng: new daum.maps.LatLng(38.0877, 127.39) },
+		{title: "가평 행복마을 캠핑장", latlng: new daum.maps.LatLng(37.7808, 127.371) },
+		{title: "박석캠핑장", latlng: new daum.maps.LatLng(37.8354, 126.739) },
+		{title: "흙의사랑관광농원", latlng: new daum.maps.LatLng(37.3097, 127.574) }
+];
+
+// 마커 이미지의 이미지 주소입니다
+var imageSrc = "http://i1.daumcdn.net/localimg/localimages/07/mapapidoc/markerStar.png"; 
+    
+for (var i = 0; i < positions.length; i ++) {
+    
+    // 마커 이미지의 이미지 크기 입니다
+    var imageSize = new daum.maps.Size(24, 35); 
+    
+    // 마커 이미지를 생성합니다    
+    var markerImage = new daum.maps.MarkerImage(imageSrc, imageSize); 
+    
+    // 마커를 생성합니다
+    var marker = new daum.maps.Marker({
+        map: map, // 마커를 표시할 지도
+        position: positions[i].latlng, // 마커를 표시할 위치
+        title : positions[i].title, // 마커의 타이틀, 마커에 마우스를 올리면 타이틀이 표시됩니다
+        image : markerImage // 마커 이미지 
+    });
+}
+</script>
+        </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer>
+      <div class="footer clearfix">
+      </div>
+
+    </footer>
+    
+  </div>
+
+  <!-- INQUIRY MODAL -->
+  <div class="modal fade bookingModal modalBook" tabindex="-1">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+          <h4 class="modal-title">Inquiry About Tour</h4>
+        </div>
+        <div class="modal-body">
+          <form action="#">
+            <div class="form-group">
+              <input type="text" class="form-control" id="yourName" placeholder="Your Name">
+            </div>
+            <div class="form-group">
+              <input type="email" class="form-control" id="yourEmail" placeholder="Your Email">
+            </div>
+            <div class="form-group">
+              <input type="text" class="form-control" id="phoneNumber" placeholder="Phone Number">
+            </div>
+            <div class="form-group">
+              <textarea class="form-control" rows="3" placeholder="Message"></textarea>
+            </div>
+            <button type="submit" class="btn buttonCustomPrimary">Submit</button>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- JAVASCRIPTS -->
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+  <script src="plugins/jquery-ui/jquery-ui.js"></script>
+  <script src="plugins/bootstrap/js/bootstrap.min.js"></script>
+  <script src="plugins/rs-plugin/js/jquery.themepunch.tools.min.js"></script>
+  <script src="plugins/rs-plugin/js/jquery.themepunch.revolution.min.js"></script>
+  <script src="plugins/selectbox/jquery.selectbox-0.1.3.min.js"></script>
+  <script src="plugins/datepicker/bootstrap-datepicker.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/waypoints/2.0.3/waypoints.min.js"></script>
+  <script src="plugins/counter-up/jquery.counterup.min.js"></script>
+  <script src="plugins/isotope/isotope.min.js"></script>
+  <script src="plugins/isotope/jquery.fancybox.pack.js"></script>
+  <script src="plugins/isotope/isotope-triger.js"></script>
+  <script src="plugins/countdown/jquery.syotimer.js"></script>
+  <script src="js/custom.js"></script>
+
+</body>
+
+</html>

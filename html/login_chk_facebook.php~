@@ -1,0 +1,66 @@
+<?php
+	session_cache_limiter('');
+	session_start();   
+?>
+
+
+<!DOCTYPE HTML>
+<html lang="ko">
+
+<head>
+<meta charset="utf-8">
+<title>validate id</title>
+</head>
+<body>
+<?php
+
+
+ $conn = mysql_connect("127.0.0.1", "root", "1111");
+    if( !$conn ) {
+        die("SQL error occurred on connect: " . mysql_error());
+    } 
+
+    if( !mysql_select_db("dbtravel") ) {
+        die("SQL error occurred selecting DB: " . mysql_error());
+    } 
+
+
+$email = $_POST['emaila'];
+$name = $_POST['namea'];
+
+$query = "SELECT example.pid, example.pname, example.ppasswd, survey.comp_suv FROM example, survey WHERE example.pid = survey.pid and example.pid= '$email' and example.is_facebook = 'y'";
+$resultID = mysql_query($query);   
+$number = mysql_num_rows($resultID);
+    
+
+if($number == 1){
+    $_SESSION['is_logged']='YES';
+	$_SESSION['usr_name'] = $_POST['namea'];
+    $_SESSION['usr_id'] = $_POST['emaila'];
+    $_SESSION['fb'] = 'Y';
+    if($rID['comp_suv']=="y"){ ?>
+
+        <script type="text/javascript">
+                window.location.replace('../HTML/index.html')
+        </script>
+      
+    <?php }
+    else{  ?>
+
+        <script type="text/javascript">
+                window.location.replace('./survey.php')
+        </script>
+      
+            
+<?php   }
+}
+else
+{ ?>
+    <script>
+        document.location.href ='./checking_facebook.php';   
+    </script> 
+<?php }
+    ?>
+	
+</body>
+</html>

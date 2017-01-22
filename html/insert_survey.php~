@@ -1,0 +1,39 @@
+<?php
+
+   session_start();   
+
+$text_question = "text";
+$value = 0;
+
+
+
+
+$conn = mysql_connect("127.0.0.1", "root", "1111");
+    if( !$conn ) {
+        die("SQL error occurred on connect: " . mysql_error());
+    } 
+
+
+    if( !mysql_select_db("dbtravel") ) {
+        die("SQL error occurred selecting DB: " . mysql_error());
+    } 
+
+   $user_email = $_SESSION['usr_id'];
+
+ $insert_query = "INSERT INTO survey VALUES('$user_email', '$text_question', $value )"; 
+ $results = mysql_query($insert_query);
+
+
+   
+?>
+
+
+<script type="text/javascript">
+
+   setTimeout("move()",5000);
+
+function move(){
+ window.location.replace('./loading.php')
+
+}          
+      </script>

@@ -1,0 +1,88 @@
+<?php
+   session_cache_limiter('');
+   session_start();   
+?>
+
+
+
+<!DOCTYPE HTML>
+<html lang="ko">
+  <head>
+    <meta charset="utf-8">
+  
+
+    <title>BDAlogincheck</title>
+<link rel="stylesheet" type="text/css" href="./stylesheets/logstyle.css" />
+</head>
+<body>
+
+
+<?php 
+      
+    $conn = mysql_connect("127.0.0.1", "root", "1111");
+    if( !$conn ) {
+        die("SQL error occurred on connect: " . mysql_error());
+    } 
+
+    # choose which database on server to use (similar to SQL USE database;)
+    if( !mysql_select_db("dbtravel") ) {
+        die("SQL error occurred selecting DB: " . mysql_error());
+    } 
+
+    extract($_POST); 
+
+    
+    $query = "SELECT user.usr_id, user.usr_name, user.usr_pwd, survey.comp_suv FROM user, survey WHERE user.usr_id = survey.usr_id and user.usr_id= '$user_email'";
+    $results = mysql_query($query);
+    $rID = mysql_fetch_array($results);
+   
+    
+    if($rID['usr_id']==$user_email){
+         if($rID['usr_pwd']==$user_password){
+      
+                 $_SESSION['is_logged']='YES';
+                  $_SESSION['usr_name'] = $rID['usr_name'];
+               $_SESSION['usr_id'] = $user_email;
+     
+         
+         if($rID['comp_suv']=="y"){ ?>
+
+               <script type="text/javascript">
+                       window.location.replace('../HTML/index.html')
+               </script>
+      
+      <?php   }
+         else{  ?>
+
+               <script type="text/javascript">
+                       window.location.replace('./survey.php')
+               </script>
+      
+            
+      <?php   }
+         
+         }
+         else{?>
+
+         <script type="text/javascript">
+                 window.location.replace('./checking.php')
+         </script>
+      
+          <?php }
+    }
+    else { ?>
+
+           <script type="text/javascript">
+           window.location.replace('./checking.php')
+      </script>
+
+
+</body>
+</html>
+<?php }
+   
+?>
+
+
+
+

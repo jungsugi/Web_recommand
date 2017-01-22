@@ -1,0 +1,690 @@
+
+
+
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+	<meta charset="utf-8">
+<script type="text/javascript">window.NREUM||(NREUM={});NREUM.info={"beacon":"bam.nr-data.net","errorBeacon":"bam.nr-data.net","licenseKey":"dd6f649abc","applicationID":"1592190","transactionName":"JQkLQxYMW1xWQBYEAAUJEFkQTF1fWlw=","queueTime":0,"applicationTime":15,"agent":""}</script>
+<script type="text/javascript">window.NREUM||(NREUM={}),__nr_require=function(t,e,n){function r(n){if(!e[n]){var o=e[n]={exports:{}};t[n][0].call(o.exports,function(e){var o=t[n][1][e];return r(o||e)},o,o.exports)}return e[n].exports}if("function"==typeof __nr_require)return __nr_require;for(var o=0;o<n.length;o++)r(n[o]);return r}({1:[function(t,e,n){function r(){}function o(t,e,n){return function(){return i(t,[(new Date).getTime()].concat(u(arguments)),e?null:this,n),e?void 0:this}}var i=t("handle"),a=t(2),u=t(3),c=t("ee").get("tracer"),f=NREUM;"undefined"==typeof window.newrelic&&(newrelic=f);var s=["setPageViewName","setCustomAttribute","finished","addToTrace","inlineHit"],p="api-",l=p+"ixn-";a(s,function(t,e){f[e]=o(p+e,!0,"api")}),f.addPageAction=o(p+"addPageAction",!0),e.exports=newrelic,f.interaction=function(){return(new r).get()};var d=r.prototype={createTracer:function(t,e){var n={},r=this,o="function"==typeof e;return i(l+"tracer",[Date.now(),t,n],r),function(){if(c.emit((o?"":"no-")+"fn-start",[Date.now(),r,o],n),o)try{return e.apply(this,arguments)}finally{c.emit("fn-end",[Date.now()],n)}}}};a("setName,setAttribute,save,ignore,onEnd,getContext,end,get".split(","),function(t,e){d[e]=o(l+e)}),newrelic.noticeError=function(t){"string"==typeof t&&(t=new Error(t)),i("err",[t,(new Date).getTime()])}},{}],2:[function(t,e,n){function r(t,e){var n=[],r="",i=0;for(r in t)o.call(t,r)&&(n[i]=e(r,t[r]),i+=1);return n}var o=Object.prototype.hasOwnProperty;e.exports=r},{}],3:[function(t,e,n){function r(t,e,n){e||(e=0),"undefined"==typeof n&&(n=t?t.length:0);for(var r=-1,o=n-e||0,i=Array(o<0?0:o);++r<o;)i[r]=t[e+r];return i}e.exports=r},{}],ee:[function(t,e,n){function r(){}function o(t){function e(t){return t&&t instanceof r?t:t?u(t,a,i):i()}function n(n,r,o){t&&t(n,r,o);for(var i=e(o),a=l(n),u=a.length,c=0;c<u;c++)a[c].apply(i,r);var s=f[m[n]];return s&&s.push([w,n,r,i]),i}function p(t,e){g[t]=l(t).concat(e)}function l(t){return g[t]||[]}function d(t){return s[t]=s[t]||o(n)}function v(t,e){c(t,function(t,n){e=e||"feature",m[n]=e,e in f||(f[e]=[])})}var g={},m={},w={on:p,emit:n,get:d,listeners:l,context:e,buffer:v};return w}function i(){return new r}var a="nr@context",u=t("gos"),c=t(2),f={},s={},p=e.exports=o();p.backlog=f},{}],gos:[function(t,e,n){function r(t,e,n){if(o.call(t,e))return t[e];var r=n();if(Object.defineProperty&&Object.keys)try{return Object.defineProperty(t,e,{value:r,writable:!0,enumerable:!1}),r}catch(i){}return t[e]=r,r}var o=Object.prototype.hasOwnProperty;e.exports=r},{}],handle:[function(t,e,n){function r(t,e,n,r){o.buffer([t],r),o.emit(t,e,n)}var o=t("ee").get("handle");e.exports=r,r.ee=o},{}],id:[function(t,e,n){function r(t){var e=typeof t;return!t||"object"!==e&&"function"!==e?-1:t===window?0:a(t,i,function(){return o++})}var o=1,i="nr@id",a=t("gos");e.exports=r},{}],loader:[function(t,e,n){function r(){if(!h++){var t=y.info=NREUM.info,e=s.getElementsByTagName("script")[0];if(t&&t.licenseKey&&t.applicationID&&e){c(m,function(e,n){t[e]||(t[e]=n)});var n="https"===g.split(":")[0]||t.sslForHttp;y.proto=n?"https://":"http://",u("mark",["onload",a()],null,"api");var r=s.createElement("script");r.src=y.proto+t.agent,e.parentNode.insertBefore(r,e)}}}function o(){"complete"===s.readyState&&i()}function i(){u("mark",["domContent",a()],null,"api")}function a(){return(new Date).getTime()}var u=t("handle"),c=t(2),f=window,s=f.document,p="addEventListener",l="attachEvent",d=f.XMLHttpRequest,v=d&&d.prototype;NREUM.o={ST:setTimeout,CT:clearTimeout,XHR:d,REQ:f.Request,EV:f.Event,PR:f.Promise,MO:f.MutationObserver},t(1);var g=""+location,m={beacon:"bam.nr-data.net",errorBeacon:"bam.nr-data.net",agent:"js-agent.newrelic.com/nr-963.min.js"},w=d&&v&&v[p]&&!/CriOS/.test(navigator.userAgent),y=e.exports={offset:a(),origin:g,features:{},xhrWrappable:w};s[p]?(s[p]("DOMContentLoaded",i,!1),f[p]("load",r,!1)):(s[l]("onreadystatechange",o),f[l]("onload",r)),u("mark",["firstbyte",a()],null,"api");var h=0},{}]},{},["loader"]);</script>
+  <link href="http://www.jonathantneal.com/wp-content/uploads/2013/01/favicon-32.png" rel="shotrcut icon">
+    <title>BDA4TEAM2-join</title>
+ <script type="text/javascript">
+//<![CDATA[
+window.gon = {};
+//]]>
+</script>
+	
+     <link href="css/stylish-portfolio.css" rel="stylesheet"> 
+
+   <link href="css/join_login-d8d843bcc67c1c8f200176e7368f182a.css" media="screen" rel="stylesheet" />
+    <script src="./join_login-af879f01b12e7a742b1a3e1628136535.js" type="text/javascript"></script>
+
+
+  </head>
+
+
+<script>
+
+var em;
+var nm;
+var pw;
+var ch1;
+var ch2;
+var rt;
+
+ function chk_input() { 
+	
+	rt= em & nm & pw & ch1 & ch2;
+
+
+		if(rt){
+			return true;
+		}
+		else{
+			alert("회원입력 양식을 모두 작성해주셔야 가입할 수 있습니다.");
+		
+			return false;
+		}
+	
+}
+
+</script>	
+  <body class="header">
+      <FORM name="send_info" action = "./check_ex_facebook.php" method = "post">
+      <INPUT TYPE="hidden" name="emaila">
+      <INPUT TYPE="hidden" name="namea">
+      </FORM>  
+<script>
+
+  function statusChangeCallback(response) {
+    console.log('statusChangeCallback');
+    console.log(response);
+
+    if (response.status == 'connected') {
+
+        FB.api('/me?fields=email,name', function(response) {
+    
+            var email1 = response.email;
+            var name1 = response.name;
+            document.send_info.emaila.value = email1;
+            document.send_info.namea.value = name1;
+            document.send_info.submit();
+            
+    });
+    }
+    }
+
+  function checkLoginState() {
+    FB.getLoginStatus(function(response) {
+      statusChangeCallback(response);
+    });
+  }
+
+  window.fbAsyncInit = function() {
+  FB.init({
+    appId      : '1563675043942424',
+    cookie     : true,  
+    xfbml      : true,  
+    version    : 'v2.7'
+  });
+
+
+
+    FB.getLoginStatus(function(response) {
+      statusChangeCallback(response);
+    });
+
+  };
+
+
+
+
+  (function(d, s, id) {
+    var js, fjs = d.getElementsByTagName(s)[0];
+    if (d.getElementById(id)) return;
+    js = d.createElement(s); js.id = id;
+    js.src = "//connect.facebook.net/ko_KR/sdk.js#xfbml=1&version=v2.7&appId=1563675043942424";
+    fjs.parentNode.insertBefore(js, fjs);
+  }(document, 'script', 'facebook-jssdk'));
+    
+    function fb_login(){
+        FB.login(function(response){
+                    checkLoginState();
+        },{scope:'email,public_profile'});
+    }
+</script>
+ <div id="contents">
+      
+<div class='movable' style='position:absolute; heigth:900px; width:100%'>
+  <div class="table_center">
+    <div class="ham_box" style="margin-bottom:12px;">
+      <div class="title">
+        회원가입
+      </div>
+      <div class="content_ham no_top_radius content_ham_upper">
+       <form name ="user_form" accept-charset="UTF-8" action="./register.php" class="user_form" id="user_form" method="post" onsubmit= "return chk_input();">
+<div style="margin:0;padding:0;display:inline">
+</div>
+          
+          <input id="continue" name="continue" type="hidden" />
+          <div class="input_form">
+            <div class="box_wrapper first">
+              <input autocapitalize="off" autocomplete="off" autocorrect="off" autofocus="autofocus" class="joinbox email" id="user_email" name="user_email" placeholder="이메일 주소" size="30" type="email" />
+             
+ <div class="validation_check"></div>
+</div>
+            <div class="box_wrapper">
+              <input class="joinbox name" id="user_name" name="user_name" placeholder="이름" size="30" type="text" />
+             
+              <div class="validation_check"></div>
+            </div>
+            <div class="box_wrapper last">
+              <input autocapitalize="off" autocomplete="off" autocorrect="off" class="joinbox password" id="user_password" name="user_password" placeholder="비밀번호 (6자 이상)" size="30" type="password" />
+              
+              <div class="validation_check"></div>
+            </div>
+          </div>
+          <div class="sign-up-page__agreement-list">
+            <div class="sign-up-page__agreement-list-item">
+              <div class="checkbox-blank legal-checkbox-button legal-checkbox-button-view">
+                <svg class="checkbox-check-stroke checkbox-legal-check-stroke" version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="10px" height="10px" enable-background="new 0 0 20 20" xml:space="preserve">
+                  <g transform="scale(0.25)">
+                    <polyline fill="none" stroke="#000000" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10" points="	4.028,13.376 14.885,33.561 35.359,6.494 "/>
+                  </g>
+                </svg>
+              </div>
+              <input id="sign-up-page__agreement" class="legal-button-wrapper" type="checkbox">
+              <label class="sign-up-page__agreement-label" for="sign-up-page__agreement">
+                <a class="legal-button">여단기 서비스 이용 약관</a><span class="legal-checkbox-button">에 동의합니다.</span>
+              </label>
+              </input>	`
+            </div>
+            <div class="sign-up-page__agreement-list-item">
+              <div class="checkbox-blank legal-privacy-checkbox-button legal-privacy-checkbox-button-view">
+                <svg class="checkbox-check-stroke checkbox-legal-privacy-check-stroke" version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="10px" height="10px" enable-background="new 0 0 20 20" xml:space="preserve">
+                  <g transform="scale(0.25)">
+                    <polyline fill="none" stroke="#000000" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10" points="	4.028,13.376 14.885,33.561 35.359,6.494 "/>
+                  </g>
+                </svg>
+              </div>
+              <input id="sign-up-page__privacy-agreement" class="legal-button-wrapper" type="checkbox">
+              <label class="sign-up-page__agreement-label" for="sign-up-page__agreement">
+                <a class="legal-privacy-button">개인정보 취급방침</a><span class="legal-privacy-checkbox-button">에 동의합니다.</span>
+              </label>
+              </input>
+            </div>
+
+          </div> <input class="btn_login" name="commit" type="submit" value="가입하기" />
+        
+</form>       
+</div>
+    </div>
+    <div class="ham_box">
+      <div class="content_ham">
+        <div class="comment_btm fb">
+          페이스북 아이디가 있으시다면
+          <a href="#" onclick="fb_login(); return false;" class="button btn_fb_join">
+            페이스북으로 1초만에가입
+            <div class="facebook_fake_btn">
+              <div class="facebook_inner_img"></div>
+            </div>
+          </a>
+        </div>
+        <div class="comment_btm">
+          <a class="comment_btm_login" href="./index.html">이미 회원이신가요? <span class="comment_btm_login_text">로그인</span></a>
+        </div>
+      </div>
+    </div>
+    <div class="shadow">
+    </div>
+  </div>
+</div>
+
+<div class="legal-element legal">
+  <div class="modal">
+    <div class="legal-dialog">
+      <div class="legal-dialog__header">여단기 서비스 이용 약관</div>
+      <a class="legal-dialog__close">
+        <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="30px" height="30px" viewBox="0 0 30 30" enable-background="new 0 0 30 30" xml:space="preserve">
+          <g transform="scale(1.5)">
+            <line fill="none" stroke="#000000 " stroke-width="2" stroke-miterlimit="10" x1="0.815" y1="0.8" x2="19.184" y2="19.2"/>
+            <line fill="none" stroke="#000000 " stroke-width="2" stroke-miterlimit="10" x1="0.815" y1="19.2" x2="19.184" y2="0.8"/>
+          </g>
+        </svg>
+      </a>
+      <div class="legal-dialog__content">
+        <div>
+          본 약관은 2016년 8월 26일부터 적용됩니다.<br/>
+          <br/>
+          제 1 조 목적<br/>
+          <br/>
+          약관 설명 작성.<br/>
+          <br/>
+          제 2 조 약관의 게시와 효력, 개정<br/>
+          <br/>
+          ① example1<br/>
+          ② example2.<br/>
+          ③example3.<br/>
+          <br/>
+          제 3 조 약관의 해석과 예외 준칙<br/>
+          <br/>
+          ① example1.<br/>
+          ② example2.<br/>
+          <br/>
+          제 4 조 용어의 정의<br/>
+          <br/>
+          ① 서비스.<br/>
+          ② 회원<br/>
+          ③ 아이디<br/>
+          ④ 비밀번호<br/>
+          ⑤ 도메인<br/>
+          ⑥ 게시물<br/>
+          ⑦ 유료서비스<br/>
+          <br/>
+          제5조 이용계약의 체결<br/>
+          <br/>
+          ① example1<br/>
+          ② example2<br/>
+          ③ example3 - describe detail <br/>
+          <br/>
+          - first<br/>
+          - second<br/>
+          - third... and so on<br/>
+          <br/>
+          ④ example4 <br/>
+          ⑤ example5<br/>
+          <br/>
+          제6조 개인정보보호 의무<br/>
+          <br/>
+          ① first<br/>
+          ② second.<br/>
+          ③ third<br/>
+          <br/>
+          제7조 회원의 아이디 및 비밀번호<br/>
+          <br/>
+          ① first<br/>
+          ② second<br/>
+          ③ third<br/>
+          ④ fourth<br/>
+          <br/>
+          제8조 회사의 의무<br/>
+          <br/>
+          ① first<br/>
+          ② second<br/>
+          ③ third<br/>
+          <br/>
+          제9조 회원의 의무<br/>
+          <br/>
+          ① example1<br/>
+          <br/>
+          - detail1<br/>
+          - detail2<br/>
+          - detail3<br/>
+          - detail4<br/>
+	  - and so on<br/>
+          <br/>
+          ② example2<br/>
+          ③ example3<br/>
+          ④ example4<br/>
+              <br/>
+          제10조 서비스의 제공 및 변경<br/>
+          <br/>
+          ① example1<br/>
+          <br/>
+          - detail1<br/>
+          - detail2<br/>
+          <br/>
+          ③ example3<br/>
+          ④ example4<br/>
+          ⑤ example5<br/>
+          ⑥ example6<br/>
+          <br/>
+          제11조 광고의 게제<br/>
+          <br/>
+          ① example1<br/>
+          ② example2<br/>
+          <br/>
+          제12조 전자우편을 통한 정보의 제공<br/>
+          <br/>
+          ① example1<br/>
+          ② example2<br/>
+          ③ example3<br/>
+          <br/>
+          - detail1<br/>
+          - detail2<br/>
+          - detail3<br/>
+          <br/>
+          제13조 서비스 이용의 제한<br/>
+          <br/>
+          ① example1<br/>
+          ② example2<br/>
+          ③ example3<br/>
+          ④ example4<br/>
+          <br/>
+          제14조 게시물의 권리와 책임<br/>
+          <br/>
+          ① example1<br/>
+          ② example2<br/>
+          ③ example3<br/>
+          ④ example4<br/>
+          <br/>
+          - detail1<br/>
+          - detail2<br/>
+          - detail3<br/>
+          <br/>
+          ⑤ example5<br/>
+          ⑥ example6<br/>
+          <br/>
+          제15조 게시물의 관리<br/>
+          <br/>
+          ① example1<br/>
+          ② example2<br/>
+          ③ example3<br/>
+          <br/>
+          제16조 서비스 이용의 중지 및 해지<br/>
+          <br/>
+          ① example1<br/>
+          ② example2<br/>
+          ③ example3<br/>
+          ④ example4<br/>
+          ⑤ example5<br/>
+          ⑥ example6<br/>
+          <br/>
+          제17조 책임제한<br/>
+          <br/>
+          ① example1<br/>
+          ② example2<br/>
+          ③ example3<br/>
+          ④ example4<br/>
+          ⑤ example5<br/>
+          ⑥ example6<br/>
+          ⑦ example7<br/>
+              <br/>
+          제18조 준거법 및 재판관할<br/>
+          <br/>
+          ① example1<br/>
+          ② example2
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="modal-backdrop"></div>
+</div>
+<div class="legal-element  legal-privacy">
+  <div class="modal">
+    <div class="legal-dialog">
+      <div class="legal-dialog__header">개인정보 취급방침</div>
+      <a class="legal-dialog__close">
+        <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="30px" height="30px" viewBox="0 0 30 30" enable-background="new 0 0 30 30" xml:space="preserve">
+          <g transform="scale(1.5)">
+            <line fill="none" stroke="#000000 " stroke-width="2" stroke-miterlimit="10" x1="0.815" y1="0.8" x2="19.184" y2="19.2"/>
+            <line fill="none" stroke="#000000 " stroke-width="2" stroke-miterlimit="10" x1="0.815" y1="19.2" x2="19.184" y2="0.8"/>
+          </g>
+        </svg>
+      </a>
+      <div class="legal-dialog__content">
+        <div>
+          총칙<br/>
+          example1<br/>
+          
+          <br/>
+         example2<br/>
+          <br/>
+          <br/>
+          개인정보의 수집·이용에 대한 동의<br/>
+          describe1<br/>
+          <br/>
+          개인정보의 수집범위 및 수집방법<br/>
+          1. first<br/>
+          - detail element<br/>
+          
+          2. second<br/>
+          - detail element<br/>
+          3. third - detail element<br/>
+          4. fourth<br/>
+          - PC<br/>
+          - 휴대전화(스마트폰) & 스마트OS 탑재 모바일 기기(Tablet PC 등)<br/>
+          5. fifth<br/>
+          - detail element<br/>
+          - detail element2<br/>
+          6. sixth<br/>
+          <br/>
+          <br/>
+          개인정보의 수집목적 및 이용목적<br/>
+          1. 서비스 제공에 관한 계약 이행 유료 서비스 제공에 따른 요금정산<br/>
+          list<br/>
+          2. 회원관리<br/>
+          example<br/>
+          3. 마케팅 및 광고에 활용<br/>
+          example<br/>
+          <br/>
+          <br/>
+          수집한 개인정보의 취급 위탁<br/>
+          [수탁업체 및 위탁업무내용]<br/>
+          - company1<br/>
+          - company2<br/>
+          <br/>
+          <br/>
+          개인정보의 자동 수집 장치의 설치, 운영 및 그 거부에 관한 사항<br/>
+          <br/>
+          개인정보의 공유 및 제공<br/>
+          <br/>
+          이용자 및 법정 대리인의 권리와 그 행사방법<br/>
+          <br/>
+          <br/>
+          개인정보의 보관기간 및 이용기간<br/>
+          <br/>
+          개인정보의 파기절차 및 방법<br/>
+          회사는 수집한 개인정보의 이용목적이 달성된 후 별도의 DB로 옮겨져 보관기간 및 이용기간에 따라 해당 정보를 지체없이 파기합니다. 파기절차 및 방법은 다음과 같습니다.<br/>
+          <br/>
+          회원의 권리와 의무<br/>
+          <br/>
+          고지의 의무<br/>
+          <br/>
+          개인정보관리책임자 및 담당자<br/>
+          회사는 회원의 개인정보보호를 가장 중요시하며, 회원의 개인정보가 훼손, 침해 또는 누설되지 않도록 최선을 다하고 있습니다. 서비스를 이용하시면서 발생하는 모든 개인정보보호 관련 민원을 고객센터에 신고하시면 신속하게 답변해드리도록 하겠습니다.<br/>
+          [개인정보관리책임자]<br/>
+          성 명 : TEAM2<br/>
+          직 위 : BDA<br/>
+          전자우편 : EMAIL<br/>
+          [개인정보관리담당자]<br/>
+          성 명 : TEAM2<br/>
+          직 위 : BDA<br/>
+          전자우편 : EMAIL<br/>
+          <br/>
+          [고객상담센터]<br/>
+          - 전화번호 : PHONE <br/>
+          - 팩스번호 : FAX <br/>
+          - 전자우편 : EMAIL<br/>
+          <br/>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="modal-backdrop"></div>
+
+
+</div>
+
+
+
+<script>
+  var timeoutID;
+  function clearNDelayAjax(i) {
+    window.clearTimeout(timeoutID);
+    timeoutID = window.setTimeout(function() {checkEmail(i)}, 100);
+  }
+
+  $('.joinbox.email, .joinbox.name, .joinbox.password').placeholder();
+
+  $(document).on("keyup", ".joinbox.email", function() {
+    clearNDelayAjax($(this));
+  });
+
+
+  function checkEmail(i) {
+    var isValid = true;
+	
+
+    if (validateEmail(i.val())) {
+  
+	 $.ajax({
+	type:"POST", 
+        url:"./check_ex.php",
+        data: {email : i.val()},
+        success: function(ret) {
+          if (ret == true) {
+            isValid = true;
+            em =isValid;
+            if ($(".input_field_errors").size()!=0) {
+              $(".input_field_errors").remove();
+            }
+          } 
+          else if (ret == false) {
+              isValid = false;
+	      em=isValid;
+            if ($(".input_field_errors").size()==0) {
+              $(".input_form").after("<div class=\"input_field_errors join\">이미 존재하는 이메일입니다.</div>");  
+            }
+          }
+          changeValidIcon(i, isValid);
+        }
+      });
+    } else {
+      changeValidIcon(i, false);
+    }
+	
+  }
+
+  // label
+  $(document).ready(function() {
+    setTimeout(function() {
+      $(".joinbox").each(function () {
+        checkVal($(this));
+        checkJoinValidation($(this));
+      });
+    },100);
+  });
+  $(document).on("keyup blur", ".joinbox", function () {
+    checkVal($(this));
+    checkJoinValidation($(this));
+  });
+  $(document).on("keydown", ".joinbox", function () {
+    checkVal($(this));
+  });
+  // validation
+  function validateEmail($email) {
+    var emailReg = /^[\w-\.]+@([\w-]+\.)+[\w-]{2,4}?$/;
+    return emailReg.test($email);
+  }
+  function changeValidIcon($this, isValid) {
+    if (isValid) {
+
+	
+	
+      $this.parent().find(".validation_check").toggleClass("valid", true);
+
+ 	
+    }
+    else {
+	
+      $this.parent().find(".validation_check").toggleClass("valid", false);
+		
+	}
+
+    var s = $(".btn_join");
+    if ($(".box_wrapper .valid").length > 2 && legalPrivacyCheckboxToggle && legalCheckboxToggle) {
+      s.toggleClass("disable",false).toggleClass("enabled", true).removeAttr("disabled");
+    }
+    else {
+      s.toggleClass("disable",true).toggleClass("enabled", false).attr("disabled","disabled");
+    }
+  }
+  function checkJoinValidation(i) {
+    var isValid = undefined;
+    if (i.hasClass("name")) {
+      isValid = $.trim(i.val()).length >= 2 && $.trim(i.val()).length <= 20;      
+      isValid = isValid && (checkHangulNum(i.val()) || checkEngNum(i.val()))
+       nm = isValid;      
+    } else if (i.hasClass("password")) {
+      isValid = i.val().length >= 6 && i.val().length <= 20;
+	pw = isValid;
+       }
+    if(isValid == true || isValid == false) {
+      changeValidIcon(i, isValid);
+    }
+  }
+
+  function checkVal(a){
+    if(a.val().length > 0)
+      a.parent().addClass("val")
+    else
+      a.parent().removeClass("val")
+  }
+
+  function checkHangulNum(str){
+    for(var j = 0; j < str.length; j++){
+      var chr = str.substr(j,1);
+      chr = escape(chr);
+      if(j==0 && !isNaN(chr)){
+        return false;
+      } else {
+        if(chr.charAt(1) == "u"){
+          chr = chr.substr(2, (chr.length - 1));
+          if((chr < "AC00") || (chr > "D7A3"))
+            return false;
+        } else if(isNaN(chr)) {
+          return false;
+        }
+      }
+    }
+    return true;
+  }
+  function checkEngNum(str){
+    if ( str.match(/[^a-z\ A-Z0-9]/) != null ) {
+      return false;
+    } else {
+      return true;
+    }
+  }
+
+  $(document).on("keydown", ".input_form", function(e){
+    var code
+    if (e.keyCode) {
+      code = e.keyCode
+    }
+    else {
+      code = e.which
+    }
+    if(code ==13) {
+      $('#submit_join[disabled!="disabled"]').trigger('click')
+    }
+  });
+
+  //legal checkbox code
+  var legalPrivacyCheckboxToggle = false;
+	ch2 =legalPrivacyCheckboxToggle;
+  $(".legal-privacy-checkbox-button").click(function(e){
+    e.stopPropagation();
+    clearNDelayAjax($(this));
+    if(legalPrivacyCheckboxToggle) {
+      $(".legal-privacy-checkbox-button-view").css("backgroundColor", "transparent");
+      $(".checkbox-legal-privacy-check-stroke").css("display", "none");
+      legalPrivacyCheckboxToggle = false;
+      ch2 = legalPrivacyCheckboxToggle;
+    } else {
+      $(".legal-privacy-checkbox-button-view").css("backgroundColor", "#ff8400");
+      $(".checkbox-legal-privacy-check-stroke").css("display", "block");
+      legalPrivacyCheckboxToggle = true;
+      ch2 =legalPrivacyCheckboxToggle;
+    }
+  });
+  var legalCheckboxToggle = false;
+	ch1= legalCheckboxToggle;
+  $(".legal-checkbox-button").click(function(e){
+    e.stopPropagation();
+    clearNDelayAjax($(this));
+    if(legalCheckboxToggle){
+      $(".legal-checkbox-button-view").css("backgroundColor", "transparent");
+      $(".checkbox-legal-check-stroke").css("display", "none");
+      legalCheckboxToggle = false;
+      ch1 =legalCheckboxToggle;
+    } else {
+      $(".legal-checkbox-button-view").css("backgroundColor", "#ff8400");
+      $(".checkbox-legal-check-stroke").css("display", "block");
+      legalCheckboxToggle = true;
+      ch1 =legalCheckboxToggle;
+    }
+  });
+
+  $("#submit_join").click(function(e){
+    if($(".box_wrapper .valid").length > 2){
+      if(!legalPrivacyCheckboxToggle || !legalCheckboxToggle) {
+        alert("약관에 모두 동의해 주셔야 회원가입을 완료할 수 있습니다.");
+      }
+    } else{
+      alert("회원가입 양식을 모두 작성해 주셔야 합니다");
+    }
+  });
+  //legal popup code
+  $(".legal-privacy-button").on("click", function(e) {
+    e.preventDefault();
+    $(".legal-privacy").css("display", "block");
+    $("body").css("overflowY", "hidden");
+  });
+  $(".legal-button").on("click", function(e) {
+    e.preventDefault();
+    $(".legal").css("display", "block");
+    $("body").css("overflowY", "hidden");
+  });
+  $(".legal-dialog__close").on("click", function(e){
+    e.preventDefault();
+    $(".legal-element").css("display", "none");
+    $("body").css("overflowY", "auto");
+  });
+</script>
+    </div>
+  </body>
+</html>
+

@@ -1,0 +1,88 @@
+<?php
+
+
+$conn = mysql_connect("127.0.0.1", "root", "1111");
+    if( !$conn ) {
+        die("SQL error occurred on connect: " . mysql_error());
+    } 
+
+    # choose which database on server to use (similar to SQL USE database;)
+    if( !mysql_select_db("ex") ) {
+        die("SQL error occurred selecting DB: " . mysql_error());
+    } 
+
+    extract($_POST);
+
+   $query = "SELECT example.pid, example.ppasswd, example.is_facebook FROM example WHERE example.pid = '$user_email'";
+$results = mysql_query($query);
+$rID = mysql_fetch_array($results);
+
+if($rID['pid'] == $user_email){
+	if($rID['is_facebook']=="n"){ ?>
+		
+    // 메일 보냄
+    <?php
+    require_once("../PHPmailer-master/PHPMailerAutoload.php"); //받은 주소에다가!
+
+    $mail = new PHPMailer(true); // the true param means it will throw exceptions on errors, which we need to catch
+
+    $mail->IsSMTP(); // telling the class to use SMTP
+
+    try {
+
+        $mail->Host = "smtp.gmail.com"; // email 보낼때 사용할 서버를 지정
+        $mail->SMTPAuth = true; // SMTP 인증을 사용함
+        $mail->Port = 465; // email 보낼때 사용할 포트를 지정
+        $mail->SMTPSecure = "ssl"; // SSL을 사용함
+        $mail->Username   = "jaehyun0419@gmail.com"; // Gmail 계정
+        $mail->Password   = "kjh129342"; // 패스워드
+        $message = "비밀번호는 [" . $rID['ppasswd'] . "] 입니다.";
+        
+        $mail->SetFrom('jaehyun0419@gmail.com', '관리자'); // 보내는 사람 email 주소와 표시될 이름
+        $mail->AddAddress($user_email, 'YOU'); // 받을 사람 email 주소와 표시될 이름
+        $mail->Subject = "비밀번호 입니다."; // 메일 제목
+        $mail->MsgHTML($message); // 메일 내용 
+        $mail->CharSet = 'UTF-8';
+        $mail->Send();
+        echo "Message Sent OK
+    \n";
+    }
+
+    catch (phpmailerException $e) {
+        echo $e->errorMessage(); 
+    } catch (Exception $e) {
+        echo $e->getMessage();
+    }
+    ?>
+
+
+    
+
+
+
+
+		<script type="text/javascript">
+		     window.location.replace('./findpw_suc.php')
+		</script>
+
+
+	<?php }
+
+	else{   ?>
+	
+		<script type="text/javascript">
+		     window.location.replace('./findpw_fb_fail.php')
+		</script>
+
+	<?php }
+
+}
+else{   ?>
+
+		<script type="text/javascript">
+		     window.location.replace('./findpw_fail.php')
+		</script>
+
+<?php }
+?>
+
